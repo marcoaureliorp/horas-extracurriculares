@@ -1,0 +1,27 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jhmaverick/blazar/master/schema/blazar-schema.json",
+  "dbs": {
+    "main_db": {
+      "drive": "mysql",
+      "host": "localhost",
+      "user": "",
+      "pass": "",
+      "db": ""
+    }
+  },
+  "configs": {
+    "view_render_mustache": true,
+    "cors": "*",
+    "console_url": "http://dev-console:4000"
+  },
+  "map": {
+    "api": {
+      "class": "App\\API\\Controller",
+      "sub": {
+        "modalidades": {
+          "class": "App\\API\\Controller\\Modalidades"
+        }
+      }
+    }
+  }
+}

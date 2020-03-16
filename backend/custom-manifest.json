@@ -1,0 +1,14 @@
+{
+  "configs": {
+    "env": 3
+  },
+  "dbs": {
+    "main_db": {
+      "drive": "mysql",
+      "host": "mariadb",
+      "user": "root",
+      "pass": "",
+      "db": "hora_extra"
+    }
+  }
+}
