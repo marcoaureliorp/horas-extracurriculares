@@ -18,6 +18,9 @@
     "api": {
       "class": "App\\API\\Controller",
       "sub": {
+        "cursos": {
+          "class": "App\\API\\Controller\\Cursos"
+        },
         "modalidades": {
           "class": "App\\API\\Controller\\Modalidades"
         }

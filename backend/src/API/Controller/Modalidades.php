@@ -15,7 +15,7 @@ class Modalidades {
     public function salvar($dados) {
         $modalidade = new Modalidade();
 
-        return isset($dados['modalidade_id'])
+        return isset($dados[Modalidade::COL_MODALIDADE_ID])
             ? $modalidade->alterar($dados)
             : $modalidade->adicionar($dados);
     }
@@ -40,7 +40,7 @@ class Modalidades {
      */
     public function excluir($dados) {
         $modalidade = new Modalidade();
-        return $modalidade->excluir($dados['modalidade_id']);
+        return $modalidade->excluir($dados[Modalidade::COL_MODALIDADE_ID]);
     }
 
 }
