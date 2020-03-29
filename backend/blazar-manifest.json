@@ -18,8 +18,14 @@
     "api": {
       "class": "App\\API\\Controller",
       "sub": {
+        "criterios": {
+          "class": "App\\API\\Controller\\Criterios"
+        },
         "cursos": {
           "class": "App\\API\\Controller\\Cursos"
+        },
+        "documentos": {
+          "class": "App\\API\\Controller\\Documentos"
         },
         "modalidades": {
           "class": "App\\API\\Controller\\Modalidades"

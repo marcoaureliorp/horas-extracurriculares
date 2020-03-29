@@ -72,18 +72,17 @@ class Modalidade extends CRUDMysql {
             throw new Exception(implode("\r\n", $is_valid));
         }
 
-        $retorno = 0;
-
         $where_con = self::COL_MODALIDADE_ID . " = ?";
         $where_val = [$dados[self::COL_MODALIDADE_ID]];
 
         try {
-            $retorno = $this->update(self::TABELA, $dados, $where_con, $where_val);
+            $this->update(self::TABELA, $dados, $where_con, $where_val);
         } catch (Exception $e) {
             Log::e("Model Modalidade", $e->getMessage() . "\n" . $e->getTraceAsString(), false, self::TABELA);
+            return false;
         }
 
-        return $retorno;
+        return $dados[self::COL_MODALIDADE_ID];
     }
 
     /**
